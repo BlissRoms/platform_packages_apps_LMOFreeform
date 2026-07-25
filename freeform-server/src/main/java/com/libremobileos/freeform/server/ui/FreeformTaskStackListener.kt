@@ -123,7 +123,7 @@ class FreeformTaskStackListener(
 
     }
 
-    override fun onTaskSnapshotChanged(taskId: Int, snapshot: TaskSnapshot) {
+    fun onTaskSnapshotChanged(taskId: Int, snapshot: TaskSnapshot) {
 
     }
 
@@ -152,7 +152,7 @@ class FreeformTaskStackListener(
 
     }
 
-    override fun onTaskRequestedOrientationChanged(taskId: Int, requestedOrientation: Int) {
+    fun onTaskRequestedOrientationChanged(taskId: Int, requestedOrientation: Int) {
         if (taskId == this.taskId) {
             dlog(TAG, "onTaskRequestedOrientationChanged: $requestedOrientation")
             val max = max(window.freeformConfig.width, window.freeformConfig.height)
@@ -191,7 +191,7 @@ class FreeformTaskStackListener(
 
     }
 
-    override fun onTaskSnapshotInvalidated(taskId: Int) {
+    fun onTaskSnapshotInvalidated(taskId: Int) {
 
     }
 }
